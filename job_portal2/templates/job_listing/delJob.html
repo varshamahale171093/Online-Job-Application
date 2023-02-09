@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% block content %}
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-12">
+
+            <form method="POST">
+                {% csrf_token %}
+               
+                
+                <label style="color: aliceblue;">
+                    Enter JOB ID :
+                    <input type="int" name=book_id>
+                </label><br><br>
+                {% buttons %}
+                <input type="submit" class="btn btn-light"/>
+                <button type="reset" class="btn btn-light">Clear</button>
+                {% endbuttons %}
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-md-12" >
+                <form action="/bookapp/add/" method="post" class="form">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    {% buttons %}
+                    <button type="submit" class="btn btn-light">Submit</button>
+                    <button type="reset" class="btn btn-light">Clear</button>
+                    {% endbuttons %}
+                </form>
+                <!-- <div class="alert alert-primary" role="alert">
+                    Book Added Successfully!!
+                  </div> -->
+            </div>
+        </div>
+    </div>
+{% endblock %}
